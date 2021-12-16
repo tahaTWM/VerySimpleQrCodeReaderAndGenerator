@@ -10,7 +10,7 @@ class Scan extends StatefulWidget {
 }
 
 class _ScanState extends State<Scan> {
-  String data = "No QrCode data yet!!";
+  String data = "No QrCode scaned yet!!";
   Future<void> _onOpen(LinkableElement link) async {
     if (await canLaunch(link.url)) {
       await launch(link.url);
@@ -44,12 +44,13 @@ class _ScanState extends State<Scan> {
   }
 
   Future getScan() async {
-    await Permission.camera.request();
-    await Permission.storage.request();
-    String dataScan = await scan.scan();
-    setState(() {
-      data = dataScan.toString();
-    });
+    if (await Permission.storage.request().isGranted &&
+        await Permission.camera.request().isGranted) {
+      String dataScan = await scan.scan();
+      setState(() {
+      	if (data != null){data = dataScan.toString();}
+      });
+    }
   }
 
   Widget content(String dataStr) {
