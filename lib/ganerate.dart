@@ -88,7 +88,7 @@ class _GanerateState extends State<Ganerate> {
       height: 190,
       child: bytes.isEmpty
           ? Center(
-              child: Text('Empty code ... ',
+              child: Text('No Qr-code create it Yet',
                   style: TextStyle(color: Colors.black38)),
             )
           : Image.memory(bytes),
