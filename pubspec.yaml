@@ -1,28 +1,27 @@
 name: qrcode_read_and_ganerate
 description: A new Flutter project.
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.15.0 <3.0.0"
+  sdk: ">=2.13.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.4 
-  flutter_linkify: ^5.0.2 
-  image_gallery_saver: ^1.7.1 
-  permission_handler: ^8.3.0 
-  qr_flutter: ^4.0.0 
-  qrscan: ^0.3.2 
-  url_launcher: ^6.0.17 
+  cupertino_icons: ^1.0.4
+  flutter_linkify: ^5.0.2
+  image_gallery_saver: ^1.7.1
+  permission_handler:
+  qr_flutter: ^4.0.0
+  qrscan: ^0.3.2
+  url_launcher:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter:
-
   uses-material-design: true
